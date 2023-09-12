@@ -1,0 +1,314 @@
+@import '../variables.less';
+.pc-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15%;
+    transition: all .4s;
+    background-color: @color-mavi;
+    .left{
+        display: flex;
+        gap: 1rem;
+        .logo{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 10px;
+            color: @color-white;
+            transition: all .5s;
+            img{
+                max-height: 20px;
+                margin-right: .7rem;
+                transition: all .5s;
+            }
+            .company-name{
+                font-weight: bold;
+            }
+        }
+        .logo:hover{
+            margin-right: .4rem;
+            img{
+                margin-right: .3rem;
+            }
+        }
+        .navlink{
+            text-decoration: none;
+            padding: 10px 10px;
+            color: @color-white1;
+            font-size: 1.1rem;
+            transition: all .3s;
+            span{
+                display: block;
+                transition: all .3s;
+            }
+        }
+        .navlink:hover{
+            span{
+                transform: translateY(-3px);
+            }
+        }
+        .navlink.active{
+            color: @color-white;
+            transform: scale(1.15) translateY(-2px);
+        }
+    }
+    .right{
+        .not-logged{
+            display: flex;
+            button{
+                color: @color-white;
+                background-color: transparent;
+                padding: 0px 10px;
+                border: none;
+                font-size: 1.1rem;
+                transform: translateY(2px);
+                cursor: pointer;
+            }
+            .link{
+                padding: 10px 30px;
+                border-radius: 20px;
+                text-decoration: none;
+            }
+            .login{
+                color: @color-white;
+                transition: all .3s;
+            }
+            .login:hover{
+                color: @color-yesil;
+            }
+            .register{
+                background-color: @color-yesil;
+                color: @color-white;
+                transition: all .3s;
+                border: 1px solid transparent;
+            }
+            .register:hover{
+                border: 1px solid @color-yesil;
+                background-color: @color-white;
+                color: @color-turquoise;
+            }
+        }
+        .logged{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            .profile,.my-tickets{
+                background-color: transparent;
+                border: none;
+                font-size: 1.5rem;
+                color: @color-white;
+                cursor: pointer;
+                img{
+                    max-width: 50px;
+                    border-radius: 100px;
+                }
+            }
+            .my-tickets{
+                position: relative;
+                .absolute{
+                    display: block;
+                    position: absolute;
+                    right: -100px;
+                    top: 50px;
+                    z-index: 50;
+                    background-color: @color-white;
+                    border: 1px solid @color-grey;
+                    min-width: 350px;
+                    max-height: 400px;
+                    overflow-y: auto;
+                    border-radius: 20px;
+                    .ticket{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 15px 20px;
+                        cursor: pointer;
+                        .ticket-name{
+                            color: @color-black-1;
+                            text-align: left;
+                            font-size: 1rem;
+                        }
+                        .ticket-kn{
+                            text-align: left;
+                            font-size: .7rem;
+                            margin-left: 1rem;
+                            color: @color-grey-0;
+                        }
+                        .ticket-date{
+                            color: @color-black-1;
+                            font-size: .9rem;
+                        }
+                    }
+                }
+                .absolute-none{
+                    display: none !important;
+                }
+                .ticket:hover{
+                    background-color: @color-grey-02;
+                }
+            }
+            .profile{
+                position: relative;
+                .absolute{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    position: absolute;
+                    top: 50px;
+                    right: 0px;
+                    z-index: 50;
+                    min-width: 240px;
+                    background-color: @color-white;
+                    border: 1px solid @color-grey;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    button{
+                        font-size: 1rem;
+                        padding: 10px 15px;
+                        width: 100%;
+                        text-align: left;
+                        color: @color-grey-0;
+                        background-color: transparent;
+                        border: none;
+                        .profile-detail-icon{
+                            color: @color-black-1;
+                            transform: translateY(2px);
+                            margin-right: 5px;
+                        }
+                    }
+                    button:hover{
+                        background-color: @color-grey-02;
+                    }
+                    button:first-child{
+                        padding-top: 15px;
+                    }
+                    button:last-child{
+                        padding-bottom: 15px;
+                    }
+                }
+                .absolute-none{
+                    display: none !important;
+                }
+            }
+        }
+    }
+    .all-detail-close{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 25;
+        width: 99vw;
+        height: 99vh;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        display: block;
+        background-color: transparent;
+    }
+    .all-detail-close-none{
+        display: none;
+    }
+}
+.pc-navbar.light{
+    background-color: @color-mavi;
+}
+.pc-navbar.dark{
+    background-color: @color-dark1;
+}
+.mobile-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: @color-white;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 5px 15px @color-grey;
+    padding: 5px 0px;
+    position: fixed;
+    z-index: 9999;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    button.link{
+        background-color: transparent;
+        border: none;
+    }
+    .link{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        padding: 10px 10px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: @color-grey;
+        .frame{
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            img{
+                border-radius: 100px;
+                max-height: 40px;
+            }
+        }
+        .fill{
+            display: none;
+        }
+        .not-fill{
+            display: block;
+        }
+        span{
+            font-size: .7rem;
+            display: none;
+        }
+    }
+    .link.active{
+        color: @color-black;
+        .fill{
+            display: block;
+        }
+        .not-fill{
+            display: none;
+        }
+        span{
+            font-size: .7rem;
+            display: block;
+        }
+    }
+    .link:not(:last-child){
+        border-right: 1px solid @color-grey-01;
+    }
+}
+.mobile-navbar.dark{
+    background-color: @color-dark1;
+    box-shadow: 0px 5px 15px @color-dark;
+    .link.active{
+        color: @color-white;
+    }
+}
+@media screen and (max-width: 2000px) {
+    
+}
+@media screen and (max-width: 1440px) {
+    .pc-navbar{
+        padding: 10px 5%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .pc-navbar{
+        .left{
+            .logo{
+                padding: 10px 5px;
+            }
+        }
+        .right{
+            .not-logged{
+                .link{
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+}

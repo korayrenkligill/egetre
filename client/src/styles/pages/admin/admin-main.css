@@ -1,0 +1,30 @@
+.admin {
+  margin: 0px 15%;
+  display: flex;
+}
+.admin .sidebar-main {
+  margin-top: 50px;
+  flex: 1;
+}
+.admin .main {
+  flex: 4;
+  min-height: 70vh;
+  background-color: #fbfbfb;
+}
+.admin.dark .main {
+  background-color: #2e2e2e;
+}
+@media screen and (max-width: 1400px) {
+  .admin {
+    margin: 0px 5%;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .admin {
+    margin: 0px 0%;
+    font-size: 0.8rem;
+  }
+  .admin .sidebar-main {
+    padding-left: 1rem;
+  }
+}

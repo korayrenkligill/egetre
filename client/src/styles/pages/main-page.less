@@ -1,0 +1,62 @@
+@import '../variables.less';
+
+.main-page{
+    .theatres{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,0fr));
+        gap: 20px;
+        padding: 20px 15%;
+        position: relative;
+        width: 100%;
+        .header-wave{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+        .footer-wave{
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+        .theatre{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .frame{
+                overflow: hidden;
+                border-radius: 15px;
+                img{
+                    width: 100%;
+                    transition: all .3s;
+                }
+                img:hover{
+                    transform: scale(1.1);
+                }
+            }
+            .theatre-name{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 5Ppx 20px;
+            }
+        }
+    }
+}
+
+.main-page.dark{
+    .theatres{
+        .theatre{
+            .theatre-name{
+                color: @color-white;
+            }
+            .sessions{
+                color: @color-white1;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.sidebar-main p {
+  color: #c0c0c0;
+  font-size: 0.8rem;
+  width: 100%;
+}
+.sidebar-main ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.sidebar-main ul li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0px;
+  color: #444444;
+  text-decoration: none;
+}
+.sidebar-main ul li a:hover {
+  background-color: #fbfbfb;
+}
+.sidebar-main.dark p {
+  color: #b4b4b4;
+}
+.sidebar-main.dark ul li a {
+  color: white;
+}
+.sidebar-main.dark ul li a:hover {
+  background-color: #2e2e2e;
+}

@@ -1,0 +1,103 @@
+.admin-user-detail .main .header {
+  margin-top: 50px;
+  color: #0099ff;
+  font-size: 1.5rem;
+  padding-left: 40px;
+}
+.admin-user-detail .main .description {
+  color: #005a96;
+  padding-left: 40px;
+}
+.admin-user-detail .main .edit {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.admin-user-detail .main .edit .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin-user-detail .main .edit .profile img {
+  max-width: 200px;
+  border-radius: 500px;
+}
+.admin-user-detail .main .edit .profile input[type="file"] {
+  display: none;
+}
+.admin-user-detail .main .edit .profile label {
+  margin-top: 1rem;
+  color: #0099ff;
+  transition: all 0.3s;
+}
+.admin-user-detail .main .edit .profile label:hover {
+  color: #444444;
+}
+.admin-user-detail .main .edit .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.admin-user-detail .main .edit .texts input {
+  padding: 7px;
+  border-radius: 20px;
+  border: 1px solid #c0c0c0;
+  color: #444444;
+}
+.admin-user-detail .main .edit .texts .name,
+.admin-user-detail .main .edit .texts .password {
+  margin-right: 10px;
+}
+.admin-user-detail .main .edit .texts .passwords {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.admin-user-detail .main .edit .texts .passwords input[type="checkbox"] {
+  transform: translateY(1px);
+  margin-right: 0.3rem;
+}
+.admin-user-detail .main .edit .texts .position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.admin-user-detail .main .edit .texts .error-message {
+  color: #ff5e5e;
+  text-align: center;
+}
+.admin-user-detail .main .edit .texts button {
+  padding: 10px;
+  background-color: #00d6a4;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.admin-user-detail .main .edit .texts button:disabled {
+  cursor: not-allowed;
+  background-color: #c0c0c0;
+}
+.admin-user-detail.dark .header {
+  color: white;
+}
+.admin-user-detail.dark .description {
+  color: #dbdbdb;
+}
+.admin-user-detail.dark .edit .profile label:hover {
+  color: white;
+}
+.admin-user-detail.dark .edit .texts input {
+  background-color: #292929;
+  border: #1a1a1a;
+  color: white;
+}
+.admin-user-detail.dark .edit .texts label {
+  color: #eeeeee;
+}

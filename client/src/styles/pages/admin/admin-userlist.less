@@ -1,0 +1,154 @@
+@import '../../variables.less';
+
+@user-column-flex: 2;
+@status-column-flex: 1;
+@gender-column-flex: 1;
+@contact-column-flex: 2;
+@actions-column-flex: 1;
+
+.admin-userlist{
+    .header{
+        margin-top: 50px;
+        color: @color-mavi;
+        font-size: 1.5rem;
+        padding-left: 40px;
+    }
+    .description{
+        color: @color-mavi1;
+        padding-left: 40px;
+    }
+    .list{
+        padding: 20px;
+        .list-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .user-column{
+                flex: @user-column-flex;
+            }
+            .status-column{
+                flex: @status-column-flex;
+            }
+            .gender-column{
+                flex: @gender-column-flex;
+            }
+            .contact-column{
+                flex: @contact-column-flex;
+            }
+            .actions-column{
+                flex: @actions-column-flex;
+            }
+        }
+        .list-item{
+            margin-top: 15px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            border-radius: 50px;
+            .list-column{
+                img{
+                    width: 50px;
+                    border-radius: 50px;
+                }
+            }
+            .user-column{
+                flex: @user-column-flex;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .status-column{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                flex: @status-column-flex;
+                .status-color{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50px;
+                    transform: translateY(2px);
+                }
+                .admin-color{
+                    background-color: red;
+                }
+                .user-color{
+                    background-color: rgb(0, 185, 25);
+                }
+            }
+            .gender-column{
+                flex: @gender-column-flex;
+            }
+            .contact-column{
+                flex: @contact-column-flex;
+                a{
+                    text-decoration: none;
+                    color: @color-mavi;
+                }
+            }
+            .actions-column{
+                flex: @actions-column-flex;
+                position: relative;
+                .actions-button{
+                    width: 80%;
+                    padding: 10px 0px;
+                    background-color: @color-mavi;
+                    color: @color-white;
+                    border: none;
+                    border-radius: 50px;
+                }
+                .user-actions{
+                    display: none;
+                }
+            }
+            .actions-column:hover{
+                .user-actions{
+                    position: absolute;
+                    z-index: 10;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    button{
+                        padding: 5px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    button:nth-child(1):hover{
+                        background-color: @color-yesil;
+                        color: @color-white;
+                    }
+                    button:nth-child(2):hover{
+                        background-color: @color-kirmizi;
+                        color: @color-white;
+                    }
+                }
+            }
+        }
+        .list-item:nth-child(even){
+            background-color: @color-white;
+        }
+    }
+}
+.admin-userlist.dark{
+    .header{
+        color: @color-white;
+    }
+    .description{
+        color: @color-white2;
+    }
+    .list{
+        .list-header{
+            color: @color-white;
+        }
+        .list-item{
+            color: @color-white;
+        }
+        .list-item:nth-child(even){
+            background-color: @color-dark2;
+        }
+    }
+}

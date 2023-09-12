@@ -1,0 +1,305 @@
+.company .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  font-size: 3rem;
+}
+.company .who-are-we {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 15%;
+  gap: 2rem;
+  position: relative;
+}
+.company .who-are-we .text {
+  color: #444444;
+  flex: 1;
+}
+.company .who-are-we .text h2 {
+  font-size: 3rem;
+}
+.company .who-are-we .text p {
+  font-size: 1.1rem;
+}
+.company .who-are-we .frame {
+  flex: 1;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.company .who-are-we .frame img {
+  width: 100%;
+  transition: all 0.3s;
+}
+.company .who-are-we .frame img:hover {
+  transform: scale(1.1);
+}
+.company .who-are-we .header-wave {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+.company .aim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 80px 25%;
+  padding: 40px;
+  border-radius: 5rem;
+  background-color: #0099ff;
+  box-shadow: 0px 10px 20px #494949;
+}
+.company .aim h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: white;
+}
+.company .aim ul {
+  list-style-position: inside;
+}
+.company .aim ul li {
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #0066ff;
+  color: #eeeeee;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+.company .aim ul li:hover {
+  transform: scale(1.1);
+}
+.company .our-managers {
+  color: #444444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 15%;
+  position: relative;
+}
+.company .our-managers .managers-header {
+  font-size: 3rem;
+}
+.company .our-managers .footer-wave {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: -1;
+}
+.company .our-managers .flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.company .our-managers .flex .grid {
+  flex: 1;
+  max-width: 660px;
+  min-width: 560px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.company .our-managers .flex .grid .grid-item .frame img {
+  width: 100px;
+  border-radius: 100%;
+}
+.company .our-managers .flex .grid .grid-item:nth-child(1) {
+  padding: 17% 2% 5% 20%;
+}
+.company .our-managers .flex .grid .grid-item:nth-child(1) .frame {
+  background-color: #ffaeae;
+  padding: 60px;
+  border-radius: 50px 50px 50px 50px;
+}
+.company .our-managers .flex .grid .grid-item:nth-child(2) {
+  padding: 18% 22% 4% 0%;
+}
+.company .our-managers .flex .grid .grid-item:nth-child(2) .frame {
+  background-color: #c6c6ff;
+  padding: 60px;
+  border-radius: 500px 500px 500px 40px;
+}
+.company .our-managers .flex .grid .grid-item:nth-child(3) {
+  padding: 0% 4% 22% 18%;
+}
+.company .our-managers .flex .grid .grid-item:nth-child(3) .frame {
+  background-color: #c1ffc1;
+  padding: 60px;
+  border-radius: 200px 0px 50px 0px;
+}
+.company .our-managers .flex .grid .grid-item:nth-child(4) {
+  padding: 0% 22% 22% 0%;
+}
+.company .our-managers .flex .grid .grid-item:nth-child(4) .frame {
+  background-color: #ffffb0;
+  padding: 30px 60px 60px 30px;
+  border-radius: 0px 0px 200px 0px;
+}
+.company .our-managers .flex .grid .grid-item.deactive .frame {
+  background-color: #c4c4c4 !important;
+}
+.company .our-managers .flex .grid .grid-item.deactive .frame img {
+  filter: grayscale(100%) !important;
+}
+.company .our-managers .flex .texts {
+  flex: 1;
+}
+.company .our-managers .flex .texts h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.company .our-managers .flex .texts h2 .job {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #c0c0c0;
+  margin-left: 10px;
+}
+.company .our-managers .flex .texts h2 .red {
+  color: #ffaeae;
+}
+.company .our-managers .flex .texts h2 .blue {
+  color: #c6c6ff;
+}
+.company .our-managers .flex .texts h2 .green {
+  color: #92ff92;
+}
+.company .our-managers .flex .texts h2 .yellow {
+  color: #e4e45c;
+}
+.company .our-managers .flex .texts p {
+  font-size: 1.1rem;
+  color: #242424;
+}
+.company.dark .header {
+  background-color: #292929;
+  color: white;
+}
+.company.dark .who-are-we .text {
+  color: white;
+}
+.company.dark .aim {
+  background-color: #292929;
+  box-shadow: 0px 10px 20px #1a1a1a;
+}
+.company.dark .aim ul li {
+  background-color: #1a1a1a;
+}
+.company.dark .our-managers {
+  color: white;
+}
+.company.dark .our-managers .flex .texts p {
+  color: #dbdbdb;
+}
+@media screen and (max-width: 1440px) {
+  .company .who-are-we {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .company .who-are-we .text {
+    order: 2;
+  }
+  .company .who-are-we .text h2 {
+    font-size: 2rem;
+  }
+  .company .who-are-we .text p {
+    font-size: 1rem;
+  }
+  .company .who-are-we .frame {
+    width: 80%;
+  }
+  .company .aim {
+    margin: 80px 15%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .company .our-managers .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 768px) {
+  .company .header {
+    font-size: 2rem;
+  }
+  .company .who-are-we .text {
+    text-align: center;
+  }
+  .company .aim {
+    margin: 80px 10%;
+    padding: 30px;
+    border-radius: 3rem;
+    box-shadow: 0px 10px 20px transparent;
+  }
+  .company .aim h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .company .aim ul {
+    list-style-position: inside;
+  }
+  .company .aim ul li {
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .company .header {
+    font-size: 1.5rem;
+  }
+  .company .who-are-we {
+    padding: 0px 10px;
+  }
+  .company .who-are-we .frame {
+    width: 90%;
+    border-radius: 20px;
+  }
+  .company .our-managers {
+    padding: 50px 10%;
+  }
+  .company .our-managers .managers-header {
+    font-size: 2rem;
+  }
+  .company .our-managers .flex .texts h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+  }
+  .company .our-managers .flex .texts h2 .job {
+    font-size: 0.6rem;
+  }
+  .company .our-managers .flex .texts p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .company .who-are-we {
+    padding: 0px 10px;
+  }
+  .company .who-are-we .text {
+    padding: 0px 10px;
+  }
+  .company .aim {
+    margin: 80px 0%;
+    padding: 20px 0px;
+    border-radius: 0rem;
+  }
+  .company .aim h2 {
+    margin-bottom: 20px;
+  }
+  .company .aim ul {
+    list-style-position: inside;
+  }
+  .company .aim ul li {
+    padding: 10px;
+    border-radius: 0px;
+    margin-bottom: 10px;
+  }
+}

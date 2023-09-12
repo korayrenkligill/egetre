@@ -1,0 +1,176 @@
+@import '../variables.less';
+
+.place{
+    position: relative;
+    .header{
+        background-color: @color-mavi;
+        color: @color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        font-size: 3rem;
+    }
+    .headertag{
+        text-align: center;
+        font-size: 2rem;
+        color: @color-black;
+        letter-spacing: .1rem;
+        padding-top: 30px;
+    }
+    .flex{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 0px 15%;
+        padding: 50px 0px;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .column{
+            flex: 1;
+            min-width: 200px;
+            img{
+                width: 100%;
+                margin-bottom: 1rem;
+                border-radius: 2rem;
+                box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.527);
+            }
+            .absolute-frame{
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.788);
+                z-index: 99999;
+                .absolute-image{
+                    height: 50%;
+                    width: auto;
+                    max-width: 95%;
+                    border: 5px solid @color-white;
+                    border-radius: 1rem;
+                }
+                .image-close-button{
+                    position: fixed;
+                    font-size: 3rem;
+                    right: 1rem;
+                    top: 1rem;
+                    color: @color-white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .address{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        iframe{
+            border-radius: 2rem;
+            width:900px;
+            height:550px;
+        }
+        h2{
+            color: @color-black;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        p{
+            color: @color-black;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+    }
+    .header-wave{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        z-index: -1;
+    }
+    .footer-wave{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.place.dark{
+    .header{
+        background-color: @color-dark1;
+    }
+    .headertag{
+        color: @color-white;
+    }
+    .address{
+        h2{
+            color: @color-white;
+        }
+        p{
+            color: @color-white1;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .place{
+        .address{
+            iframe{
+                width: 600px;
+                height: 400px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .place{
+        .flex{
+            margin: 0px 5%;
+            .column{
+                img{
+                    border-radius: 10px;
+                }
+                .absolute-frame{
+                    .absolute-image{
+                        width: 90%;
+                        height: auto;
+                        max-height: 90%;
+                    }
+                }
+            }
+        }
+        .header{
+            font-size: 2rem;
+        }
+        .address{
+            iframe{
+                width: 80%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 475px) {
+    .place{
+        .header{
+            font-size: 1.5rem;
+        }
+        .address{
+            iframe{
+                width: 90%;
+                border-radius: 5px;
+            }
+            p{
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

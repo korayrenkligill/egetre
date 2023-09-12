@@ -1,0 +1,125 @@
+.admin-theatrelist .header {
+  margin-top: 50px;
+  color: #0099ff;
+  font-size: 1.5rem;
+  padding-left: 40px;
+}
+.admin-theatrelist .description {
+  color: #005a96;
+  padding-left: 40px;
+}
+.admin-theatrelist .list {
+  padding: 20px;
+}
+.admin-theatrelist .list .list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.admin-theatrelist .list .list-header .image-column {
+  flex: 1;
+}
+.admin-theatrelist .list .list-header .name-column {
+  flex: 1;
+}
+.admin-theatrelist .list .list-header .description-column {
+  flex: 3;
+}
+.admin-theatrelist .list .list-header .price-column {
+  flex: 1;
+}
+.admin-theatrelist .list .list-header .actions-column {
+  flex: 1;
+}
+.admin-theatrelist .list .list-item {
+  margin-top: 15px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+}
+.admin-theatrelist .list .list-item .list-column img {
+  width: 100%;
+  border-radius: 10px;
+}
+.admin-theatrelist .list .list-item .image-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admin-theatrelist .list .list-item .name-column {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+.admin-theatrelist .list .list-item .description-column {
+  flex: 3;
+}
+.admin-theatrelist .list .list-item .price-column {
+  flex: 1;
+}
+.admin-theatrelist .list .list-item .price-column a {
+  text-decoration: none;
+  color: #0099ff;
+}
+.admin-theatrelist .list .list-item .actions-column {
+  flex: 1;
+  position: relative;
+}
+.admin-theatrelist .list .list-item .actions-column .action-button {
+  width: 80%;
+  padding: 10px 0px;
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+}
+.admin-theatrelist .list .list-item .actions-column .theatre-actions {
+  display: none;
+}
+.admin-theatrelist .list .list-item .actions-column:hover .theatre-actions {
+  position: absolute;
+  z-index: 10;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.admin-theatrelist .list .list-item .actions-column:hover .theatre-actions button {
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.admin-theatrelist .list .list-item .actions-column:hover .theatre-actions button:nth-child(1):hover {
+  background-color: #00d6a4;
+  color: white;
+}
+.admin-theatrelist .list .list-item .actions-column:hover .theatre-actions button:nth-child(2):hover {
+  background-color: #fa5252;
+  color: white;
+}
+.admin-theatrelist .list .list-item:nth-child(even) {
+  background-color: white;
+}
+.admin-theatrelist.dark .header {
+  color: white;
+}
+.admin-theatrelist.dark .description {
+  color: #dbdbdb;
+}
+.admin-theatrelist.dark .list .list-header {
+  color: white;
+}
+.admin-theatrelist.dark .list .list-item {
+  color: white;
+}
+.admin-theatrelist.dark .list .list-item:nth-child(even) {
+  background-color: #353535;
+}

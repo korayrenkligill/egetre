@@ -1,0 +1,40 @@
+@import '../../variables.less';
+.sidebar-main{
+    p{
+        color: @color-grey;
+        font-size: .8rem;
+        width: 100%;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        li{
+            a{
+                display: block;
+                width: 100%;
+                padding: 10px 0px;
+                color: @color-black;
+                text-decoration: none;
+            }
+            a:hover{
+                background-color: @color-white-4;
+            }
+        }
+    }
+}
+.sidebar-main.dark{
+    p{
+        color: @color-white3;
+    }
+    ul{
+        li{
+            a{
+                color: @color-white;
+            }
+            a:hover{
+                background-color: @color-dark3;
+            }
+        }
+    }
+}

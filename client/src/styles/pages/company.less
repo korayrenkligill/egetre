@@ -1,0 +1,345 @@
+@import '../variables.less';
+
+.company{
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        font-size: 3rem;
+    }
+    .who-are-we{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 15%;
+        gap: 2rem;
+        position: relative;
+        .text{
+            color: @color-black;
+            flex: 1;
+            h2{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.1rem;
+            }
+        }
+        .frame{
+            flex: 1;
+            border-radius: 3rem;
+            overflow: hidden;
+            img{
+                width: 100%;
+                transition: all .3s;
+            }
+            img:hover{
+                transform: scale(1.1);
+            }
+        }
+        .header-wave{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+    .aim{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 80px 25%;
+        padding: 40px;
+        border-radius: 5rem;
+        background-color: @color-mavi;
+        box-shadow: 0px 10px 20px @color-grey-0;
+        h2{
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: @color-white;
+        }
+        ul{
+            list-style-position: inside;
+            li{
+                padding: 20px;
+                border-radius: 30px;
+                background-color: @color-mavi2;
+                color: @color-white1;
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+                transition: all .3s;
+            }
+            li:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .our-managers{
+        color: @color-black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 15%;
+        position: relative;
+        .managers-header{
+            font-size: 3rem;
+        }
+        .footer-wave{
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+        .flex{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .grid{
+                flex: 1;
+                max-width: 660px;
+                min-width: 560px;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                .grid-item{
+                    .frame{
+                        img{
+                            width: 100px;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+                .grid-item:nth-child(1){
+                    .frame{
+                        background-color: rgb(255, 174, 174);
+                        padding: 60px;
+                        border-radius: 50px 50px 50px 50px;
+                    }
+                    padding: 17% 2% 5% 20%;
+                }
+                .grid-item:nth-child(2){
+                    .frame{
+                        background-color: rgb(198, 198, 255);
+                        padding: 60px;
+                        border-radius: 500px 500px 500px 40px;
+                    }
+                    padding: 18% 22% 4% 0%;
+                }
+                .grid-item:nth-child(3){
+                    .frame{
+                        background-color: rgb(193, 255, 193);
+                        padding: 60px;
+                        border-radius: 200px 0px 50px 0px;
+                    }
+                    padding: 0% 4% 22% 18%;
+                }
+                .grid-item:nth-child(4){
+                    .frame{
+                        background-color: rgb(255, 255, 176);
+                        padding: 30px 60px 60px 30px;
+                        border-radius: 0px 0px 200px 0px;
+                    }
+                    padding: 0% 22% 22% 0%;
+                }
+                .grid-item.deactive{
+                    .frame{
+                        background-color: rgb(196, 196, 196) !important;
+                        img{
+                            filter: grayscale(100%) !important;
+                        }
+                    }
+                }
+            }
+            .texts{
+                flex: 1;
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                    .job{
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: @color-grey;
+                        margin-left: 10px;
+                    }
+                    .red{
+                        color: rgb(255, 174, 174);
+                    }
+                    .blue{
+                        color: rgb(198, 198, 255);
+                    }
+                    .green{
+                        color: rgb(146, 255, 146);
+                    }
+                    .yellow{
+                        color: rgb(228, 228, 92);
+                    }
+                }
+                p{
+                    font-size: 1.1rem;
+                    color: @color-black-1;
+                }
+            }
+        }
+    }
+}
+.company.dark{
+    .header{
+        background-color: @color-dark1;
+        color: @color-white;
+    }
+    .who-are-we{
+        .text{
+            color: @color-white;
+        }
+    }
+    .aim{
+        background-color: @color-dark1;
+        box-shadow: 0px 10px 20px @color-dark;
+        ul{
+            li{
+                background-color: @color-dark;
+            }
+        }
+    }
+    .our-managers{
+        color: @color-white;
+        .flex{
+            .texts{
+                p{
+                    color: @color-white2;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    .company{
+        .who-are-we{
+            flex-direction: column;
+            justify-content: center;
+            .text{
+                order: 2;
+                h2{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+            .frame{
+                width: 80%;
+            }
+        }
+        .aim{
+            margin: 80px 15%;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .company{
+        .our-managers{
+            .flex{
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .company{
+        .header{
+            font-size: 2rem;
+        }
+        .who-are-we{
+            .text{
+                text-align: center;
+            }
+        }
+        .aim{
+            margin: 80px 10%;
+            padding: 30px;
+            border-radius: 3rem;
+            box-shadow: 0px 10px 20px transparent;
+            h2{
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+            ul{
+                list-style-position: inside;
+                li{
+                    padding: 15px;
+                    border-radius: 20px;
+                    font-size: 1rem;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .company{
+        .header{
+            font-size: 1.5rem;
+        }
+        .who-are-we{
+            padding: 0px 10px;
+            .frame{
+                width: 90%;
+                border-radius: 20px;
+            }
+        }
+        .our-managers{
+            padding: 50px 10%;
+            .managers-header{
+                font-size: 2rem;
+            }
+            .flex{
+                .texts{
+                    h2{
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 1.4rem;
+                        .job{
+                            font-size: .6rem;
+                        }
+                    }
+                    p{
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .company{
+        .who-are-we{
+            padding: 0px 10px;
+            .text{
+                padding: 0px 10px;
+            }
+        }
+        .aim{
+            margin: 80px 0%;
+            padding: 20px 0px;
+            border-radius: 0rem;
+            h2{
+                margin-bottom: 20px;
+            }
+            ul{
+                list-style-position: inside;
+                li{
+                    padding: 10px;
+                    border-radius: 0px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.login-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.login-register .frame img {
+  width: 100%;
+}
+.login-register .login-or-register {
+  display: flex;
+  width: 263px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+.login-register .login-or-register .login,
+.login-register .login-or-register .register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s;
+}
+.login-register .login-or-register .login h2,
+.login-register .login-or-register .register h2 {
+  color: #0099ff;
+}
+.login-register .login-or-register .login input,
+.login-register .login-or-register .register input {
+  margin-top: 1rem;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  border: 1px solid #c0c0c0;
+}
+.login-register .login-or-register .login .error-message,
+.login-register .login-or-register .register .error-message {
+  color: #ff5e5e;
+  font-size: 0.8rem;
+}
+.login-register .login-or-register .login button,
+.login-register .login-or-register .register button {
+  margin-top: 1rem;
+  padding: 10px 60px;
+  background-color: #00d6a4;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.login-register .login-or-register .login button:disabled,
+.login-register .login-or-register .register button:disabled {
+  cursor: not-allowed;
+  background-color: #c0c0c0;
+}
+.login-register .login-or-register .login p,
+.login-register .login-or-register .register p {
+  margin-top: 10px;
+  color: #0099ff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.login-register .login-or-register .login p:hover,
+.login-register .login-or-register .register p:hover {
+  color: #444444;
+}
+.login-register .login-or-register .login .gender,
+.login-register .login-or-register .register .gender {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+}
+.login-register.dark .login-or-register .login h2,
+.login-register.dark .login-or-register .register h2 {
+  color: white;
+}
+.login-register.dark .login-or-register .login input,
+.login-register.dark .login-or-register .register input {
+  color: #eeeeee;
+  background-color: #292929;
+  border-color: #1a1a1a;
+}
+.login-register.dark .login-or-register .login label,
+.login-register.dark .login-or-register .register label {
+  color: #eeeeee;
+}
+.login-register.dark .login-or-register .login p:hover,
+.login-register.dark .login-or-register .register p:hover {
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  .login-register .frame {
+    display: none;
+  }
+}

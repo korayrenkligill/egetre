@@ -1,0 +1,344 @@
+@import '../variables.less';
+
+.detail-page{
+    position: relative;
+    width: 100%;
+    .background-color{
+        padding: 0px 0px 0px 0px;
+        background-color: @color-mavi;
+    }
+    .details{
+        transform: translateY(80px);
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        gap: 2rem;
+        margin: 0px 15%;
+        .frame{
+            max-width: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 6px solid @color-white;
+            img{
+                width: 100%;
+                transition: all .3s;
+            }
+            img:hover{
+                transform: scale(1.1);
+            }
+        }
+        .right{
+            margin-top: 50px;
+            width: 100%;
+            .first-row{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: @color-white;
+                .header{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    p{
+                        color: @color-white2;
+                        .icon{
+                            transform: translateY(2px) scale(1.5);
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+            }
+            .trailer{
+                margin-top: 1rem;
+                color: @color-white1;
+            }
+            .cast{
+                margin-top: 2rem;
+                color: @color-white;
+                .icon{
+                    transform: translateY(2px) scale(1.5);
+                    margin-right: .5rem;
+                }
+                .cast-span{
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+            .categories{
+                margin-top: .7rem;
+                color: @color-white;
+                .icon{
+                    transform: translateY(2px) scale(1.5);
+                    margin-right: .5rem;
+                }
+                .category-span{
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .rules{
+        margin: 140px 15% 40px 15%;
+        ul{
+            margin-top: 1rem;
+            list-style-position: inside;
+            li{
+                margin-top: .7rem;
+            }
+        }
+    }
+    .sessions{
+        margin: 20px 15%;
+        .sessions-date{
+            button{
+                padding: 10px 20px;
+                border-radius: 15px 15px 0px 0px;
+                border: none;
+            }
+            button.selected{
+                background-color: @color-mavi;
+                color: white;
+            }
+        }
+        .seats{
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            margin-top: 1rem;
+            position: relative;
+            span{
+                text-align: center;
+            }
+            .seat {
+                text-align: center;
+                font-size: 3rem;
+                background-color: transparent;
+                border: none;
+            }
+            .empty-seat{
+                color: @color-black;
+                transition: all .2s;
+            }
+            .empty-seat:hover{
+                color: @color-yesil;
+            }
+            .sold-seat{
+                color: @color-mavi;
+            }
+            .selected-seat{
+                color: @color-yesil;
+                transition: all .2s;
+            }
+            .selected-seat:hover{
+                color: @color-black;
+            }
+            .seat-a{
+                position: relative;
+            }
+            .seat-a::after{
+                content: "A";
+                position: absolute;
+                font-size: 1rem;
+                left: -10px;
+                top: 15px;
+            }
+            .seat-b{
+                position: relative;
+            }
+            .seat-b::after{
+                content: "B";
+                position: absolute;
+                font-size: 1rem;
+                left: -10px;
+                top: 15px;
+            }
+            .seat-c{
+                position: relative;
+            }
+            .seat-c::after{
+                content: "C";
+                position: absolute;
+                font-size: 1rem;
+                left: -10px;
+                top: 15px;
+            }
+            .seat-d{
+                position: relative;
+            }
+            .seat-d::after{
+                content: "D";
+                position: absolute;
+                font-size: 1rem;
+                left: -10px;
+                top: 15px;
+            }
+
+            .seat-margin{
+                border-right: 2px solid black;
+            }
+
+        }
+        .selected-seats-list{
+            margin-top: 20px;
+            p{
+                color: @color-grey;
+            }
+            .list{
+                display: flex;
+                gap: 1rem;
+                margin-top: 10px;
+                color: @color-black;
+                font-weight: bold;
+            }
+        }
+        .buy-tickets{
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                padding: 10px 60px;
+                background-color: @color-yesil;
+                border-radius: 30px;
+                border: none;
+                color: @color-white;
+            }
+        }
+    }
+    .please-login{
+        margin: 50px 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: @color-mavi;
+        padding: 20px;
+        border-radius: 15px;
+        cursor: pointer;
+        p{
+            color: @color-white;
+            font-size: 1.1rem;
+        }
+        span{
+            color: @color-white;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.detail-page.dark{
+    .background-color{
+        background-color: @color-dark1;
+    }
+    .details{
+        .frame{
+            border-color: @color-dark2;
+        }
+    }
+    .rules{
+        h2{
+            color: @color-white;
+        }
+        ul{
+            li{
+                color: @color-white2;
+            }
+        }
+    }
+    .sessions{
+        .sessions-date{
+            button{
+                background-color: @color-dark3;
+            }
+            button.selected{
+                background-color: @color-dark;
+            }
+        }
+        .seats{
+            span{
+                color: @color-white;
+            }
+            .empty-seat{
+                color: @color-white2;
+            }
+            .selected-seat:hover{
+                color: @color-white2;
+            }
+            .seat-a::after{
+                color: @color-white;
+            }
+            .seat-b::after{
+                color: @color-white;
+            }
+            .seat-c::after{
+                color: @color-white;
+            }
+            .seat-d::after{
+                color: @color-white;
+            }
+        }
+        .selected-seats-list{
+            p{
+                color: @color-grey;
+            }
+            .list{
+                color: @color-white;
+            }
+        }
+    }
+    .please-login{
+        background-color: @color-dark1;
+        p{
+            color: @color-white;
+        }
+        span{
+            color: @color-white;
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    .detail-page{
+        .background-color{
+            padding-bottom: 70px;
+        }
+        .details{
+            transform: translateY(0px);
+        }
+    }    
+}
+@media screen and (max-width: 1000px) {
+    .detail-page{
+        .details{
+            flex-direction: column;
+            align-items: center;
+        }
+    }    
+}
+@media screen and (max-width: 768px) {
+    .detail-page{
+        .details{
+            padding-top: 70px;
+        }
+    }    
+}
+@media screen and (max-width: 700px) {
+    .detail-page{
+        .details{
+            .right{
+                .first-row{
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+        .sessions{
+            .seats{
+                grid-template-columns: repeat(5,1fr);
+                .seat{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+    }    
+}

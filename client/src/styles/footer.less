@@ -1,0 +1,47 @@
+@import './variables.less';
+.footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 40px 15%;
+    background-color: @color-mavi;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 5px;
+        min-width: 200px;
+        h2{
+            color: @color-white;
+            margin-bottom: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: @color-white1;
+            .footer-icon{
+                margin-right: 4px;
+                transform: translateY(2px);
+            }
+        }
+        span{
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+.footer.light{
+    background-color: @color-mavi;
+}
+.footer.dark{
+    background-color: @color-dark1;
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        padding: 40px 5%;
+        margin-bottom: 60px;
+    }
+}

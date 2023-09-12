@@ -1,0 +1,306 @@
+.detail-page {
+  position: relative;
+  width: 100%;
+}
+.detail-page .background-color {
+  padding: 0px 0px 0px 0px;
+  background-color: #0099ff;
+}
+.detail-page .details {
+  transform: translateY(80px);
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  gap: 2rem;
+  margin: 0px 15%;
+}
+.detail-page .details .frame {
+  max-width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 6px solid white;
+}
+.detail-page .details .frame img {
+  width: 100%;
+  transition: all 0.3s;
+}
+.detail-page .details .frame img:hover {
+  transform: scale(1.1);
+}
+.detail-page .details .right {
+  margin-top: 50px;
+  width: 100%;
+}
+.detail-page .details .right .first-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.detail-page .details .right .first-row .header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.detail-page .details .right .first-row .header p {
+  color: #dbdbdb;
+}
+.detail-page .details .right .first-row .header p .icon {
+  transform: translateY(2px) scale(1.5);
+  margin-right: 0.5rem;
+}
+.detail-page .details .right .trailer {
+  margin-top: 1rem;
+  color: #eeeeee;
+}
+.detail-page .details .right .cast {
+  margin-top: 2rem;
+  color: white;
+}
+.detail-page .details .right .cast .icon {
+  transform: translateY(2px) scale(1.5);
+  margin-right: 0.5rem;
+}
+.detail-page .details .right .cast .cast-span {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.detail-page .details .right .categories {
+  margin-top: 0.7rem;
+  color: white;
+}
+.detail-page .details .right .categories .icon {
+  transform: translateY(2px) scale(1.5);
+  margin-right: 0.5rem;
+}
+.detail-page .details .right .categories .category-span {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.detail-page .rules {
+  margin: 140px 15% 40px 15%;
+}
+.detail-page .rules ul {
+  margin-top: 1rem;
+  list-style-position: inside;
+}
+.detail-page .rules ul li {
+  margin-top: 0.7rem;
+}
+.detail-page .sessions {
+  margin: 20px 15%;
+}
+.detail-page .sessions .sessions-date button {
+  padding: 10px 20px;
+  border-radius: 15px 15px 0px 0px;
+  border: none;
+}
+.detail-page .sessions .sessions-date button.selected {
+  background-color: #0099ff;
+  color: white;
+}
+.detail-page .sessions .seats {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin-top: 1rem;
+  position: relative;
+}
+.detail-page .sessions .seats span {
+  text-align: center;
+}
+.detail-page .sessions .seats .seat {
+  text-align: center;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+}
+.detail-page .sessions .seats .empty-seat {
+  color: #444444;
+  transition: all 0.2s;
+}
+.detail-page .sessions .seats .empty-seat:hover {
+  color: #00d6a4;
+}
+.detail-page .sessions .seats .sold-seat {
+  color: #0099ff;
+}
+.detail-page .sessions .seats .selected-seat {
+  color: #00d6a4;
+  transition: all 0.2s;
+}
+.detail-page .sessions .seats .selected-seat:hover {
+  color: #444444;
+}
+.detail-page .sessions .seats .seat-a {
+  position: relative;
+}
+.detail-page .sessions .seats .seat-a::after {
+  content: "A";
+  position: absolute;
+  font-size: 1rem;
+  left: -10px;
+  top: 15px;
+}
+.detail-page .sessions .seats .seat-b {
+  position: relative;
+}
+.detail-page .sessions .seats .seat-b::after {
+  content: "B";
+  position: absolute;
+  font-size: 1rem;
+  left: -10px;
+  top: 15px;
+}
+.detail-page .sessions .seats .seat-c {
+  position: relative;
+}
+.detail-page .sessions .seats .seat-c::after {
+  content: "C";
+  position: absolute;
+  font-size: 1rem;
+  left: -10px;
+  top: 15px;
+}
+.detail-page .sessions .seats .seat-d {
+  position: relative;
+}
+.detail-page .sessions .seats .seat-d::after {
+  content: "D";
+  position: absolute;
+  font-size: 1rem;
+  left: -10px;
+  top: 15px;
+}
+.detail-page .sessions .seats .seat-margin {
+  border-right: 2px solid black;
+}
+.detail-page .sessions .selected-seats-list {
+  margin-top: 20px;
+}
+.detail-page .sessions .selected-seats-list p {
+  color: #c0c0c0;
+}
+.detail-page .sessions .selected-seats-list .list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+  color: #444444;
+  font-weight: bold;
+}
+.detail-page .sessions .buy-tickets {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail-page .sessions .buy-tickets button {
+  padding: 10px 60px;
+  background-color: #00d6a4;
+  border-radius: 30px;
+  border: none;
+  color: white;
+}
+.detail-page .please-login {
+  margin: 50px 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #0099ff;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.detail-page .please-login p {
+  color: white;
+  font-size: 1.1rem;
+}
+.detail-page .please-login span {
+  color: white;
+  font-size: 1.5rem;
+}
+.detail-page.dark .background-color {
+  background-color: #292929;
+}
+.detail-page.dark .details .frame {
+  border-color: #353535;
+}
+.detail-page.dark .rules h2 {
+  color: white;
+}
+.detail-page.dark .rules ul li {
+  color: #dbdbdb;
+}
+.detail-page.dark .sessions .sessions-date button {
+  background-color: #2e2e2e;
+}
+.detail-page.dark .sessions .sessions-date button.selected {
+  background-color: #1a1a1a;
+}
+.detail-page.dark .sessions .seats span {
+  color: white;
+}
+.detail-page.dark .sessions .seats .empty-seat {
+  color: #dbdbdb;
+}
+.detail-page.dark .sessions .seats .selected-seat:hover {
+  color: #dbdbdb;
+}
+.detail-page.dark .sessions .seats .seat-a::after {
+  color: white;
+}
+.detail-page.dark .sessions .seats .seat-b::after {
+  color: white;
+}
+.detail-page.dark .sessions .seats .seat-c::after {
+  color: white;
+}
+.detail-page.dark .sessions .seats .seat-d::after {
+  color: white;
+}
+.detail-page.dark .sessions .selected-seats-list p {
+  color: #c0c0c0;
+}
+.detail-page.dark .sessions .selected-seats-list .list {
+  color: white;
+}
+.detail-page.dark .please-login {
+  background-color: #292929;
+}
+.detail-page.dark .please-login p {
+  color: white;
+}
+.detail-page.dark .please-login span {
+  color: white;
+}
+@media screen and (max-width: 1300px) {
+  .detail-page .background-color {
+    padding-bottom: 70px;
+  }
+  .detail-page .details {
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .detail-page .details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .detail-page .details {
+    padding-top: 70px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .detail-page .details .right .first-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .detail-page .sessions .seats {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .detail-page .sessions .seats .seat {
+    font-size: 2rem;
+  }
+}

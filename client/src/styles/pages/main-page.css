@@ -1,0 +1,51 @@
+.main-page .theatres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0fr));
+  gap: 20px;
+  padding: 20px 15%;
+  position: relative;
+  width: 100%;
+}
+.main-page .theatres .header-wave {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+.main-page .theatres .footer-wave {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: -1;
+}
+.main-page .theatres .theatre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-page .theatres .theatre .frame {
+  overflow: hidden;
+  border-radius: 15px;
+}
+.main-page .theatres .theatre .frame img {
+  width: 100%;
+  transition: all 0.3s;
+}
+.main-page .theatres .theatre .frame img:hover {
+  transform: scale(1.1);
+}
+.main-page .theatres .theatre .theatre-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5Ppx 20px;
+}
+.main-page.dark .theatres .theatre .theatre-name {
+  color: white;
+}
+.main-page.dark .theatres .theatre .sessions {
+  color: #eeeeee;
+}

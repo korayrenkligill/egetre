@@ -1,0 +1,136 @@
+.admin-userlist .header {
+  margin-top: 50px;
+  color: #0099ff;
+  font-size: 1.5rem;
+  padding-left: 40px;
+}
+.admin-userlist .description {
+  color: #005a96;
+  padding-left: 40px;
+}
+.admin-userlist .list {
+  padding: 20px;
+}
+.admin-userlist .list .list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.admin-userlist .list .list-header .user-column {
+  flex: 2;
+}
+.admin-userlist .list .list-header .status-column {
+  flex: 1;
+}
+.admin-userlist .list .list-header .gender-column {
+  flex: 1;
+}
+.admin-userlist .list .list-header .contact-column {
+  flex: 2;
+}
+.admin-userlist .list .list-header .actions-column {
+  flex: 1;
+}
+.admin-userlist .list .list-item {
+  margin-top: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 50px;
+}
+.admin-userlist .list .list-item .list-column img {
+  width: 50px;
+  border-radius: 50px;
+}
+.admin-userlist .list .list-item .user-column {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admin-userlist .list .list-item .status-column {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+.admin-userlist .list .list-item .status-column .status-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  transform: translateY(2px);
+}
+.admin-userlist .list .list-item .status-column .admin-color {
+  background-color: red;
+}
+.admin-userlist .list .list-item .status-column .user-color {
+  background-color: #00b919;
+}
+.admin-userlist .list .list-item .gender-column {
+  flex: 1;
+}
+.admin-userlist .list .list-item .contact-column {
+  flex: 2;
+}
+.admin-userlist .list .list-item .contact-column a {
+  text-decoration: none;
+  color: #0099ff;
+}
+.admin-userlist .list .list-item .actions-column {
+  flex: 1;
+  position: relative;
+}
+.admin-userlist .list .list-item .actions-column .actions-button {
+  width: 80%;
+  padding: 10px 0px;
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+}
+.admin-userlist .list .list-item .actions-column .user-actions {
+  display: none;
+}
+.admin-userlist .list .list-item .actions-column:hover .user-actions {
+  position: absolute;
+  z-index: 10;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.admin-userlist .list .list-item .actions-column:hover .user-actions button {
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.admin-userlist .list .list-item .actions-column:hover .user-actions button:nth-child(1):hover {
+  background-color: #00d6a4;
+  color: white;
+}
+.admin-userlist .list .list-item .actions-column:hover .user-actions button:nth-child(2):hover {
+  background-color: #fa5252;
+  color: white;
+}
+.admin-userlist .list .list-item:nth-child(even) {
+  background-color: white;
+}
+.admin-userlist.dark .header {
+  color: white;
+}
+.admin-userlist.dark .description {
+  color: #dbdbdb;
+}
+.admin-userlist.dark .list .list-header {
+  color: white;
+}
+.admin-userlist.dark .list .list-item {
+  color: white;
+}
+.admin-userlist.dark .list .list-item:nth-child(even) {
+  background-color: #353535;
+}

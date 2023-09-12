@@ -1,0 +1,178 @@
+@import './variables.less';
+
+.filter{
+    padding: 50px 15% 50px 15%;
+    .container{
+        display: flex;
+        border-radius: 20px;
+        .filter-type{
+            flex: 1;
+            position: relative;
+            .filter-name{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 30px;
+            }
+            cursor: pointer;
+            p{
+                font-size: .8rem;
+            }
+            h2{
+                font-size: 1.2rem;
+            }
+            .filter-absolute{
+                position: absolute;
+                left: 0px;
+                top: 80px;
+                z-index: 50;
+                width: 100%;
+                padding: 20px;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .filter-item{
+                    display: block;
+                    padding: 5px;
+                    width: 100%;
+                    border-radius: 10px;
+                    input{
+                        margin-right: .5rem;
+                    }
+                }
+            }
+            .filter-none{
+                display: none;
+            }
+        }
+    }
+    .all-filter-close{
+        position: absolute;
+        width: 99vw;
+        height: 99vh;
+        top: 0px;
+        left: 0px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        z-index: 25;
+    }
+    .all-filter-close-none{
+        display: none;
+    }
+}
+
+.filter.light{
+    background-color: @color-mavi;
+    .container{
+        background-color: @color-white;
+        box-shadow: 0px 10px 10px @color-mavi1;
+        .filter-type{
+            p{
+                color: @color-grey-0;
+            }
+            h2{
+                color: @color-black;
+            }
+            .filter-icon{
+                color: @color-black;
+            }
+            .filter-absolute{
+                background-color: @color-white;
+                border: 1px solid @color-grey;
+                box-shadow: 0px 5px 10px @color-black-2;
+                .filter-item:hover{
+                    background-color: @color-grey-02;
+                }
+            }
+        }
+    }
+}
+.filter.dark{
+    background-color: @color-dark1;
+    .container{
+        background-color: @color-white;
+        box-shadow: 0px 10px 10px @color-dark;
+        .filter-type{
+            p{
+                color: @color-grey-0;
+            }
+            h2{
+                color: @color-black;
+            }
+            .filter-icon{
+                color: @color-black;
+            }
+            .filter-absolute{
+                background-color: @color-white;
+                border: 1px solid @color-grey;
+                box-shadow: 0px 5px 10px @color-black-2;
+                .filter-item:hover{
+                    background-color: @color-grey-02;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px)
+{
+    .filter{
+        .container{
+            .filter-type{
+                p{
+                    font-size: .7rem;
+                }
+                h2{
+                    font-size: 1rem;
+                    color: @color-black;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .filter{
+        padding: 30px 0% 50px 0%;
+        .container{
+            flex-direction: column;
+            border-radius: 0px;
+            .filter-type{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: relative;
+                padding: 5px 10px;
+                .filter-name{
+                    width: 100%;
+                    padding: 10px 20px;
+                }
+                cursor: pointer;
+                p{
+                    font-size: .8rem;
+                    color: @color-grey-0;
+                }
+                h2{
+                    font-size: 1.2rem;
+                    color: @color-black;
+                }
+                .filter-absolute{
+                    position: relative;
+                    left: 0px;
+                    top: 0px;
+                    padding: 0px 30px;
+                    border: 1px solid transparent;
+                    box-shadow: 0px 0px 0px transparent;
+                }
+                .filter-none{
+                    display: none;
+                }
+            }
+        }
+    }    
+}

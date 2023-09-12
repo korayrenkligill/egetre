@@ -1,0 +1,173 @@
+@import '../../variables.less';
+
+.admin-theatre-detail{
+    .main{
+        .header{
+            margin-top: 50px;
+            color: @color-mavi;
+            font-size: 1.5rem;
+            padding-left: 40px;
+        }
+        .description{
+            color: @color-mavi1;
+            padding-left: 40px;
+        }
+        .theatre-add-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 3rem;
+            .number-input{
+                width: 80%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                input{
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid @color-white3;
+                    color: @color-black;
+                }
+                label{
+                    font-size: .8rem;
+                    color: @color-grey;
+                    word-wrap: break-word;
+                }
+            }
+            .choose-image{
+                margin-top: 50px;
+                width: 300px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: @color-grey-01;
+                color: @color-white;
+                font-size: 2rem;
+                border-radius: 20px;
+                cursor: pointer;
+                p{
+                    font-size: 1.5rem;
+                }
+                span{
+                    font-size: 1rem;
+                }
+            }
+            .choosed-image{
+                margin-top: 50px;
+                width: 300px;
+                height: 400px;
+                display: flex;
+                background-color: @color-grey-01;
+                border-radius: 20px;
+                cursor: pointer;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+            .form-item{
+                width: 80%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid @color-white3;
+                color: @color-black;
+            }
+            .theatre-description{
+                resize: vertical;
+            }
+            .add-session{
+                padding: 10px 50px;
+                font-size: .7rem;
+                border: none;
+                background-color: @color-mavi;
+                border-radius: 20px;
+                color: @color-white;
+                cursor: pointer;
+            }
+            .choose-session-panel{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                input{
+                    padding: 5px;
+                    border-radius: 10px;
+                    border: 1px solid @color-white3;
+                    color: @color-black;
+                }
+            }
+            .error-message{
+                color: rgb(255, 94, 94);
+            }
+            .everything-ok{
+                display: none;
+            }
+            .sessions{
+                width: 80%;
+                h2{
+                    color: @color-grey;
+                    font-weight: 400;
+                    font-size: 1.3rem;
+                    border-bottom: 1px solid @color-grey;
+                }
+                .margin-bottom{
+                    margin-bottom: 50px;
+                }
+            }
+            .add-theatre{
+                padding: 15px 60px;
+                font-size: 1rem;
+                border: none;
+                background-color: @color-yesil;
+                border-radius: 20px;
+                color: @color-white;
+                cursor: pointer;
+            }
+            .add-theatre:disabled{
+                cursor: not-allowed;
+                background-color: @color-grey;
+            }
+        }
+    }
+}
+.admin-theatre-detail.dark{
+    .header{
+        color: @color-white;
+    }
+    .description{
+        color: @color-white2;
+    }
+    .theatre-add-form{
+        input[type="file"]{
+            color: @color-white;
+        }
+        .form-item{
+            background-color: @color-dark1;
+            border-color: @color-dark;
+            color: @color-white1;
+        }
+        .number-input{
+            input{
+                background-color: @color-dark1;
+                border-color: @color-dark;
+                color: @color-white1;
+            }
+        }
+        .choose-session-panel{
+            input{
+                background-color: @color-dark1;
+                border-color: @color-dark;
+                color: @color-white1;
+            }
+        }
+        .sessions{
+            p{
+                color: @color-white;
+            }
+        }
+    }
+}

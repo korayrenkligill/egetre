@@ -1,0 +1,341 @@
+@import '../variables.less';
+@margin-20: 0px 20%; 
+@margin-10: 0px 10%; 
+@margin-5: 0px 5%; 
+@margin-0: 0px 0%; 
+
+.profile{
+    margin: @margin-20;
+    .profile-notchange{
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0px 7px 23px rgba(0, 0, 0, 0.144);
+        .profile-frame{
+            img{
+                border-radius: 500px;
+                max-width: 150px;
+            }
+        }
+        .texts{
+            h2{
+                color: @color-black;
+            }
+            p{
+                color: @color-grey-0;
+                span{
+                    color: @color-grey;
+                    margin-right: 5px;
+                    font-size: .8rem;
+                    .icon{
+                        transform: translateY(2px) scale(1.2);
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .logout{
+                color: @color-mavi;
+                font-size: .9rem;
+                margin-top: 10px;
+                display: inline-block;
+                cursor: pointer;
+                transition: all .3s;
+            }
+            .logout:hover{
+                color: @color-black;
+            }
+        }
+        .buttons{
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            display: flex;
+            gap: 20px;
+            button{
+                background-color: transparent;
+                border: none;
+                font-size: 1.1rem;
+                color: @color-black;
+            }
+        }
+    }
+    .profile-change{
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0px 7px 23px rgba(0, 0, 0, 0.144);
+        .profile-frame{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input{
+                display: none;
+            }
+            label{
+                background-color: transparent;
+                color: @color-mavi;
+                border: none;
+                text-align: center;
+            }
+            label:hover{
+                color: @color-black;
+            }
+            img{
+                max-width: 150px;
+                border-radius: 500px;
+            }
+        }
+        .texts{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-left: 20px;
+            .name{
+                margin-right: 10px;
+            }
+            .password{
+                margin-right: 10px;
+            }
+            input{
+                padding: 7px;
+                border-radius: 20px;
+                border: 1px solid @color-grey;
+                font-size: .9rem;
+            }
+            .passwords{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                input[type="checkbox"]{
+                    transform: translateY(2px);
+                    margin-right: 5px;
+                }
+                label{
+                    font-size: .8rem;
+                }
+            }
+        }
+        .buttons{
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            display: flex;
+            gap: 20px;
+            button{
+                background-color: transparent;
+                border: none;
+                font-size: 1.1rem;
+                color: @color-black;
+            }
+        }
+    }
+    .tickets{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        gap: 30px;
+        .ticket{
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: @color-grey-02;
+            position: relative;
+            z-index: 2;
+            .left{
+                display: flex;
+                .ticket-state-usable{
+                    height: 100%;
+                    width: 10px;
+                    background-color: rgb(129, 245, 139);
+                }
+                .ticket-state-past{
+                    height: 100%;
+                    width: 10px;
+                    background-color: rgb(218, 81, 81);
+                }
+                .ticket-texts{
+                    padding: 20px;
+                    h2{
+                        font-size: 1.2rem;
+                        color: @color-black;
+                    }
+                    p{
+                        font-size: .9rem;
+                        margin-bottom: 10px;
+                        color: @color-black;
+                    }
+                    button{
+                        padding: 5px 20px 5px 0px;
+                        text-align: left;
+                        background-color: transparent;
+                        border: none;
+                        color: @color-mavi;
+                        transition: all .2s;
+                        cursor: pointer;
+                    }
+                    button:hover{
+                        color: @color-black;
+                    }
+                }
+            }
+            .koltuk-numarasi{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.profile.dark{
+    .profile-notchange{
+        background-color: @color-dark1;
+        .texts{
+            h2{
+                color: @color-white;
+            }
+            p{
+                color: @color-white;
+            }
+        }
+        .buttons{
+            button{
+                color: @color-white;
+            }
+        }
+    }
+    .profile-change{
+        background-color: @color-dark1;
+        .profile-frame{
+            label:hover{
+                color: @color-white;
+            }
+        }
+        .texts{
+            input{
+                background-color: @color-dark;
+                border: @color-dark;
+                color: @color-white1;
+            }
+            label{
+                color: @color-white;
+            }
+        }
+        .buttons{
+            button{
+                color: @color-white;
+            }
+        }
+    }
+    .tickets{
+        .ticket{
+            background-color: @color-dark1;
+            .left{
+                .ticket-texts{
+                    h2{
+                        color: @color-white;
+                    }
+                    p{
+                        color: @color-white2;
+                    }
+                }
+            }
+            .koltuk-numarasi{
+                p{
+                    color: @color-white;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1160px) {
+    .profile{
+        margin: @margin-10;
+    }
+}
+@media screen and (max-width: 880px) {
+    .profile{
+        margin: @margin-0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .profile{
+        .profile-change{
+            flex-direction: column;
+            .texts{
+                margin: 0px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .profile{
+        .profile-change{
+            .texts{
+                width: 80%;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .name{
+                        margin: 0px;
+                    }
+                }
+                .passwords{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    div:nth-child(1){
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .password{
+                            margin: 0px;
+                        }
+                    }
+                    div:nth-child(2){
+                        display: block;
+                    }
+                }
+            }
+        }
+        .profile-notchange{
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .profile{
+        .profile-change{
+            padding: 10px;
+            .texts{
+                width: 100%;
+                .passwords{
+                    div:nth-child(2){
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+        .profile-notchange{
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
